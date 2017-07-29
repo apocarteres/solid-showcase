@@ -16,6 +16,6 @@ public class ValidatorFacade implements Validator {
 
     @Override
     public boolean isValid(Model model) {
-        return validators.stream().filter(v->v.isValid(model)).count() != validators.size();
+        return validators.stream().filter(v->v.isValid(model)).count() == validators.size();
     }
 }
